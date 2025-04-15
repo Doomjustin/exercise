@@ -25,6 +25,7 @@ add_subdirectory(log)
 add_library(exercise_common STATIC
     ${EXERCISE_INTERNAL_INCLUDE_DIR}/cache.h
     ${EXERCISE_INTERNAL_INCLUDE_DIR}/config.h
+    ${EXERCISE_INTERNAL_INCLUDE_DIR}/generator.h
     ${EXERCISE_INTERNAL_INCLUDE_DIR}/log.h
     ${EXERCISE_INTERNAL_INCLUDE_DIR}/math.h
     ${EXERCISE_INTERNAL_INCLUDE_DIR}/noncopyable.h
