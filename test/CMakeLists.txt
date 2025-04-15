@@ -6,3 +6,6 @@ target_link_libraries(test.strings_utility PRIVATE exercise::common Catch2::Catc
 
 add_executable(test.lru_cache test_lru_cache.cpp)
 target_link_libraries(test.lru_cache PRIVATE exercise::common Catch2::Catch2WithMain)
+
+add_executable(test.log test_log.cpp)
+target_link_libraries(test.log PRIVATE exercise::common Catch2::Catch2WithMain)

@@ -20,13 +20,24 @@ target_compile_definitions(exercise_base
 )
 
 
+add_subdirectory(log)
+
 add_library(exercise_common STATIC
+    ${EXERCISE_INTERNAL_INCLUDE_DIR}/cache.h
     ${EXERCISE_INTERNAL_INCLUDE_DIR}/config.h
+    ${EXERCISE_INTERNAL_INCLUDE_DIR}/log.h
     ${EXERCISE_INTERNAL_INCLUDE_DIR}/noncopyable.h
     ${EXERCISE_INTERNAL_INCLUDE_DIR}/thread_pool.h
+    ${EXERCISE_INTERNAL_INCLUDE_DIR}/utility.h
+    ${EXERCISE_INTERNAL_INCLUDE_DIR}/value.h
+    log.cpp
     thread_pool.cpp
 )
 
 add_library(exercise::common ALIAS exercise_common)
 
-target_link_libraries(exercise_common PUBLIC exercise::base)
+target_link_libraries(exercise_common 
+    PUBLIC 
+        exercise::base
+        exercise::log
+)
