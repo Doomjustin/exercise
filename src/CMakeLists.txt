@@ -10,9 +10,8 @@ target_compile_features(${PROJECT_NAME}_base INTERFACE cxx_std_23)
 
 target_compile_definitions(${PROJECT_NAME}_base 
     INTERFACE
-        $<$<CONFIG:Debug>:CPP_TEMPLATE_DEBUG>
-        $<$<CONFIG:Release>:DOCTEST_CONFIG_DISABLE>
+        $<$<CONFIG:Debug>:EXERCISE_DEBUG>
 )
 
 
-configure_file(config.h.in ${PROJECT_SOURCE_DIR}/include/cpp_template/config.h @ONLY)
+configure_file(config.h.in ${PROJECT_SOURCE_DIR}/include/exercise/config.h @ONLY)
