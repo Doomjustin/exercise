@@ -7,10 +7,12 @@ add_library(exercise_log OBJECT
     ${LOG_INCLUDE_DIR}/entry.h
     ${LOG_INCLUDE_DIR}/formatter.h
     ${LOG_INCLUDE_DIR}/simple_formatter.h
+    ${LOG_INCLUDE_DIR}/spdlog_logger.h
     base_logger.cpp
     console_appender.cpp
     formattable_appender.cpp
     simple_formatter.cpp
+    spdlog_logger.cpp
 )
 
 add_library(exercise::log ALIAS exercise_log)
