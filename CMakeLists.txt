@@ -28,8 +28,6 @@ find_lto(CXX)
 
 
 add_subdirectory(third-party EXCLUDE_FROM_ALL)
-
-add_subdirectory(app)
 add_subdirectory(src)
 
 if(${PROJECT_NAME}_BUILD_TESTS)
