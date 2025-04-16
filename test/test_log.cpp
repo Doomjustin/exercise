@@ -2,7 +2,6 @@
 
 #include <cstdlib>
 
-
 int main(int argc, char* argv[])
 {
     LOG_FATAL("this is a message from {}", "forward log");
